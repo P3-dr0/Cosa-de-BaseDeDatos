@@ -1,0 +1,8 @@
+3)SELECT socios.nombre, inscriptos.* FROM socios JOIN inscriptos ON socios.documento = inscriptos.documento;
+
+4)SELECT socios.nombre, inscriptos.deporte FROM socios JOIN inscriptos ON socios.documento = inscriptos.documento;
+
+5)SELECT socios.nombre, inscriptos.* FROM socios JOIN inscriptos ON socios.documento = inscriptos.documento WHERE socios.documento = '23333444';
+
+6) SELECT socios.* FROM socios JOIN inscriptos ON socios.documento = inscriptos.documento WHERE inscriptos.deporte = 'natacion';
+

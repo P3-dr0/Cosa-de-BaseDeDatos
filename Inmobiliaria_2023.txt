@@ -1,0 +1,15 @@
+DROP TABLE IF EXISTS `inquilinos`;
+CREATE TABLE `inquilinos` (
+  `DNI` int(8) NOT NULL,
+  `Nombre` varchar(50) DEFAULT NULL,
+  `Apellido` varchar(50) DEFAULT NULL,
+  `Email` varchar(80) DEFAULT NULL,
+  `Telefono` varchar(29) DEFAULT NULL,
+  `Sueldo` decimal(10,0) DEFAULT NULL,
+  `Garantia` varchar(250) DEFAULT NULL,
+  PRIMARY KEY (`DNI`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+LOCK TABLES `inquilinos` WRITE;
+INSERT INTO `inquilinos` VALUES (50387988,'Pedro','Cazón','pecazon@gmail.com','1122458867',80000,'Tiene un terreno'),(50387989,'Alaaan456','Alfonzo','alaaan456alfonzo@gmail.com','1122458868',8000,'Tiene 8k verdes en el banco');
+UNLOCK TABLES;

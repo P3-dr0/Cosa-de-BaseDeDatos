@@ -1,0 +1,6 @@
+* select producto, SUM(cantidad) from ventas GROUP by producto;
+* select producto, AVG(cantidad) from ventas GROUP by producto;
+* SELECT producto, MIN(fecha) from ventas GROUP by producto;
+* select fecha, SUM(cantidad) from ventas GROUP by cantidad;
+* select producto, sum(cantidad) as total from ventas GROUP by producto Order by total desc LIMIT 1;
+

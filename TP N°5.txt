@@ -1,0 +1,41 @@
+create database pizzeria_2023;
+use pizzeria_2023;
+
+create table cliente( 
+codigo_cl int(11) auto_increment,
+nombre varchar(150),
+ubicacion varchar(250),
+telefono varchar(20),
+primary key(codigo_cl)  
+);
+
+create table pizzas(
+codigo_pz int(11)auto_increment,
+tipo varchar(289),
+descripcion varchar (200),
+primary key(codigo_pz)
+
+);
+
+create table comprar(
+id int(11)auto_increment,
+fecha date,
+hora time,
+cliente_cod int(11),
+pizzas_cod int(11),
+primary key (id),
+foreign key (cliente_cod) references cliente(codigo_cl),
+foreign key (pizzas_cod) references pizzas(codigo_pz)
+);
+
+insert into cliente (nombre, ubicacion, telefono) values("Pedro Cazon", "grieta del invocador", "11 2525-4040");
+insert into cliente (nombre, ubicacion, telefono) values("Leonel Venialgo", "grieta del invocador", "11 2525-4041");
+insert into cliente (nombre, ubicacion, telefono) values("Alan Alfonzo", "grieta del invocador", "11 2525-4042");
+
+insert into pizzas (tipo, descripcion) values("1 muzarella", "grande");
+insert into pizzas (tipo, descripcion) values("2 muzarella", "grande");
+insert into pizzas (tipo, descripcion) values("3 muzarella", "grande"); 
+
+insert into comprar (fecha, hora) values ("2023/05/12", "20:25:00");
+insert into comprar (fecha, hora) values ("2023/05/13", "20:25:01");
+insert into comprar (fecha, hora) values ("2023/05/14", "20:25:02");

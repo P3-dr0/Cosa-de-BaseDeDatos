@@ -1,0 +1,17 @@
+1)select nombre from producto;
+
+2)select nombre, precio from producto;
+
+3)show columns from producto;
+
+4)select nombre, precio, precio*0.84 as euros, precio*1.22 as dolares from producto;
+
+5)select nombre, precio as euros, precio*0.84 as dolares from producto;
+
+6)select nombre as "nombre de producto", precio as euros, precio*0.84 as dolares from producto;
+
+7)select nombre from fabricante order by nombre asc;
+
+8)select nombre from fabricante order by nombre desc;
+
+9)select * from fabricante limit 5;

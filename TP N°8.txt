@@ -1,0 +1,22 @@
+USE `discoteca_db`;
+
+ALTER TABLE `clientes` ADD COLUMN `correo electronico` VARCHAR(100);
+
+UPDATE `clientes` SET `correo electronico` = "n/a";
+UPDATE `clientes` SET `nombre` = "pepe", `correo electronico` = "pepe@gmail.com" WHERE `nombre` = "Juan Perez";
+
+DELETE FROM `pagos` WHERE `reserva_id` = 4;
+DELETE FROM `reservas` WHERE `id` = 4;
+DELETE FROM `entradas`;
+
+SELECT * FROM `clientes` WHERE `genero` = "Masculino";
+
+SELECT CONCAT(nombre, " ", `correo electronico`) AS `nombre y correo` FROM `clientes`;
+
+SELECT SUM(`monto`) AS `total` FROM `pagos`;
+
+SELECT SUM(`edad`) DIV COUNT(`id`) FROM `clientes`;
+SELECT AVG(`edad`) FROM `clientes`;
+
+SELECT MIN(`edad`) FROM `clientes`;
+SELECT MAX(`edad`) FROM `clientes`;
